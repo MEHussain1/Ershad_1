@@ -1,0 +1,183 @@
+/* CSS VARIABLES */
+:root {
+	--text: 5, 3, 21;
+	--background: 251, 251, 254;
+	--primary: 47, 39, 206;
+	--secondary: 222, 220, 255;
+	--accent: 109, 106, 182;
+}
+
+/* CSS RESET */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: rgb(var(--text));
+	background-color: rgb(var(--background));
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1,
+h3,
+h5,
+h2,
+h4,
+h6 {
+	color: rgba(var(--primary), 1);
+	margin: 1.25rem 0.25 0.25 0.25;
+	padding-top: 1.25rem;
+}
+
+/* NAV */
+
+nav ul {
+	background-color: rgb(var(--accent));
+	margin: 0 0 0.75rem 0;
+}
+
+nav li {
+	background-color: rgb(var(--accent));
+	color: rgb(var(--secondary));
+	padding: 1rem;
+	display: inline-block;
+	border-radius: 10px;
+}
+
+nav li:hover {
+	color: rgb(var(--accent));
+	background-color: rgb(var(--secondary));
+}
+
+.no-hover {
+	pointer-events: none;
+}
+
+/* WRAPPER */
+
+/*  MAIN CONTENT STYLES */
+
+main {
+	width: 60%; /* THIS SETS THE WIDTH AT 45 CHAR LONG -- GREAT FOR SMALL SCREENS, NOT FOR BIG! */
+	margin: 0 auto;
+}
+
+main table {
+	border-spacing: 1rem;
+}
+
+code {
+	font-size: larger;
+	background-color: rgb(var(--secondary));
+	padding: 5px 10px;
+	border-radius: 10px;
+}
+
+main table tr td:first-child {
+	width: 20%;
+}
+
+main p {
+	margin: 0.5rem 0 1.5rem 0;
+}
+
+/* GRIDSSSSSS */
+
+/* all my grid containers will be of display grid and have the same gaps! */
+.grid-container {
+	display: grid;
+	gap: 20px;
+}
+
+.grid-item {
+	box-sizing: border-box;
+	padding: 20px;
+	background-color: rgba(var(--primary), 0.75);
+	color: rgb(var(--background));
+}
+
+.grid-item:nth-of-type(even) {
+	background-color: rgba(var(--primary), 1);
+}
+
+/* DIFFERENT GRID LAYOUTS */
+
+/* Simple Grid is just AUTO AUTO AUTO */
+.grid-simple {
+	grid-template-columns: repeat(4, 1fr);
+	/* we could use 1fr 1fr 1fr 1fr OR repeat(4, 1fr) */
+}
+
+/* Spanning Grid */
+.grid-spanning {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.span-item1 {
+	background-color: aqua !important;
+	color: rgba(var(--primary), 1) !important;
+	grid-row: 1 / span 2; /* Start on row 1 and span 2 rows */
+}
+
+.span-item2 {
+	background-color: hotpink !important;
+	color: rgba(var(--primary), 1) !important;
+	grid-row: 1/3;
+	grid-column: 2 / span 2;
+}
+
+.span-item3 {
+	background-color: chartreuse !important;
+	color: rgba(var(--primary), 1) !important;
+	grid-column: span 3; 
+	/* Without span, there'd be an empty opening */
+}
+
+/* Auto Flow Grid */
+.grid-flow {
+	/* RESPONSIVE! What's happening here? Auto-fit will wrap our columns into rows. Minmax takes 2 values: the minimum size and the maximum size. Our columns will be at minimum 160px and no smaller -- and at max they will all be 1 fraction */
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-rows: repeat(4, auto);
+	/* I'm now guaranteed 4 rows at auto-size. I could do autofit */
+	grid-auto-flow: dense;
+	/* Auto Flow Dense will begin to fill the gaps for me */
+}
+
+.item-span-big {
+	background-color: gold !important;
+	color: rgba(var(--primary), 1) !important;
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.item-span-huge {
+	background-color: yellowgreen !important;
+	color: rgba(var(--primary), 1) !important;
+	grid-column: span 3;
+}
+
+/*  FOOTER STYLES */
+footer {
+	padding: 1rem;
+	margin: 1rem 0 0 0;
+	background-color: rgb(var(--secondary));
+	color: rgb(var(--accent));
+	text-align: right;
+}
+
+/* MEDIA QUERIES */
+
+/* @media screen and (max-width: 500px) {
+	.grid-simple,
+	.grid-spanning,
+	.grid-flow {
+		grid-template-columns: 1fr;
+	}
+
+	.grid-item {
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+} */

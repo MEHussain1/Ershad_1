@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Audio/Video Demo</title>
+  </head>
+  <body>
+    <main>
+      <!-- HTML5 has Multimedia elements with built-in media support -->
+      <!-- 
+            Multimedia types:
+            Flash - obsolete
+            Java Applets - requires Java be installed and enabled on machine but allows embedding of Java (not to be confused with JavaScript)
+            Object element - we can embed plugins including flash players, PDF readers, Java applets
+            Audio element - supports only 3 files: .mp3, .ogg, .wav
+            Video element - supports only .mp4, .ogg, .webm
+         -->
+      <!-- AUDIO ELEMENT -->
+      <!-- 
+        Browsers that do not support the audio element will ignore the tag so include text within the audio element to alert users!
+
+        Audio element attributes:
+        autoplay - automatically plays audio on page load
+        controls - displays controls
+        loop - audio will play continuously
+        muted - audio should be muted
+        preload - auto metadata, non - whether and how audio should be loaded when page loads
+        src - URL - URL of audio file
+
+        Format options:
+        <audio controls autoplay>
+            <source src="music.mp3" type="audio/mp3">
+            <p>Your browser does not support the audio element.</p>
+        </audio>
+
+        Same as:
+        <audio controls="controls" autoplay="autoplay">
+            <source src="music.mp3" type="audio/mp3">
+            <p>Your browser does not support the audio element.</p>
+        </audio>
+
+        Same as:
+        <audio controls autoplay src="music.mp3" type="audio/mp3">
+            <p>Your browser does not support the audio element.</p>
+        </audio>
+
+     -->
+      <section id="audio">
+        <h2>Audio</h2>
+        <audio src="music.mp3" type="audio/mp3">
+          <p>Your browser does not support the audio element.</p>
+        </audio>
+      </section>
+
+      <!-- VIDEO ELEMENT -->
+      <!-- 
+        Can use embed, object, or video to deal with video files - object is a good fallback for obscure files
+        
+        Video element attributes:
+            autoplay
+            controls
+            height - in pixels - height of video player
+            loop
+            muted
+            poster - URL - image to be shown while video is downloading or until user clicks play
+            preload
+            src
+            width - pixels - width of video player
+
+            Format options:
+            <video controls autoplay width="320" height="240">
+                <source src="video.mp4" type="video/mp4">
+                <p>Your browser does not support the video element.</p>
+            </video>
+
+            for embedding: 
+                https://www.youtube.com/watch?v=sVjk5nrb_lI
+                https://www.youtube.com/watch?v=2mKN6PDZTmc 
+       -->
+      <section id="video">
+        <h2>Video</h2>
+        <video src="./media/ghosts.mp4" type="video/mp4" autoplay loop controls>
+          <p>Your browser does not support video files.</p>
+        </video>
+
+        <iframe width=""></iframe>
+      </section>
+    </main>
+  </body>
+</html>

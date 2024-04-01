@@ -1,0 +1,10 @@
+section {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+audio,
+video {
+  margin: 0 auto;
+}

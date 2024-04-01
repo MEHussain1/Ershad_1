@@ -1,0 +1,174 @@
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    text-decoration: dashed underline 2px;
+}
+
+li {
+    text-decoration: none;
+}
+
+body {
+    color: rgb(var(--text));
+    background-color: rgb(var(--background));
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1,
+h3,
+h5,
+h2,
+h4,
+h6 {
+    color: rgb(var(--primary), 1);
+    margin: 1.25rem 0.25 0.25 0.25;
+    padding-top: 1.25rem;
+}
+
+p {
+    font-size: large;
+}
+
+/* NAV */
+
+nav ul {
+    background-color: rgb(var(--accent));
+    margin: 0 0 0.75rem 0;
+}
+
+nav li {
+    background-color: rgb(var(--accent));
+    color: rgb(var(--secondary));
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+/* WRAPPER STYLES */
+#wrapper {
+    max-width: 75%
+    margin: 0 auto;
+}
+
+/* WRAPPER */
+#wrapper {
+    border: 5px solid black;
+    display: flex;
+    gap: 2;
+    flex-direction: column-reverse;
+    flex-wrap: ;
+    /* Can use reverse-column to create a column view and shoves the sidebar to the end */
+}
+
+#wrapper > * {
+    flex: 1;
+    /* The same as flex-grow: 1; flex-shrink: 1; flex-basis: 0 */
+}
+
+#wrapper > * {
+    flex: 3;
+}
+
+#wrapper > * {
+    flex: 1 200px;
+}
+
+/* SIDEBAR STYLES */
+
+.sidebar article {
+    
+}
+
+.sidebar {
+    width: 300px;
+    background-color: rgba(var(--secondary), 1);
+    border-radius: 50px;
+    padding: 1.5rem;
+}
+
+.sidebar > h2 {
+
+}
+
+.sidebar {
+    width:
+    background-color: ;
+    border-radius: ;
+    padding: ;
+    display: ;
+    margin: ;
+}
+
+/* MAIN CONTENT STYLES */
+
+main {
+    width: 45ch; /* THIS SETS THE WIDTH AT 45 CHAR LONG -- GREAT FOR SMALL SCREENS, NOT FOR BIG! */
+    margin: 0 auto;
+}
+
+main p {
+    margin: 0.5 rem;
+}
+
+/* FOOTER STYLES */
+footer {
+    clear: both;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+    background-color: rgb(var(--secondary));
+    color: rgb(var(--accent));
+    text-align: right;
+}
+
+/* MEDIA QUERIES */
+/* MOBILE FIRST SAYS WE NEED TO START WITH MOBILE DISPLAY/LAYOUT OF OUR CONTENT */
+
+/* PRINT VIEW */
+@media print {
+
+    body {
+        font-family: serif;
+        font-size: x-large;
+    }
+
+}
+
+/* TABLET VIEW */
+@media only screen and (min-width: 550px) and (max-width: 768px) {
+
+    main {
+        width: 100%;
+    }
+
+    p {
+        font-size: medium;
+    }
+
+}
+
+/* DESKTOP VIEW */
+
+@media only screen and (min-width: 769px) {
+
+    .sidebar {
+        display: block;
+    }
+
+    #wrapper {
+        max-width: 90%;
+    }
+
+    #wrapper > * {
+        float: left; /* THIS NEED TO BE LEFT TO MAKE A 2-COL LAYOUT SANS GRID */
+    }
+
+    main {
+        min-width: 75ch;
+        max-width: 100ch;
+    }
+
+    @media screen and (min-width=600px) {
+        #wrapper {
+
+        }
+    }
+}

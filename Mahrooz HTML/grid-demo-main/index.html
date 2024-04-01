@@ -1,0 +1,294 @@
+<!-- This site uses FLEXBOX and media queries -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<title>Grid Demonstration</title>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<a href="/"><li>Home</li></a>
+				<a href="#grid-demos">
+					<li>Grid Demos</li>
+				</a>
+				<li class="no-hover">|</li>
+				<li class="no-hover">Resources:</li>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid">
+					<li>Mozilla Doc</li>
+				</a>
+				<a href="https://www.w3schools.com/css/css_grid.asp">
+					<li>W3 Schools</li>
+				</a>
+				<a href="https://css-tricks.com/introduction-fr-css-unit/">
+					<li>CSS Tricks: Fraction Units</li>
+				</a>
+				<a
+					href="https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/"
+				>
+					<li>CSS Tricks: Responsive Layouts Using CSS Grid</li>
+				</a>
+			</ul>
+		</nav>
+		<main>
+			<h1>Grid Demonstration</h1>
+			<h2>Quick Reference Table</h2>
+			<p>
+				You can review a more comprehensive list of properties on
+				<a href="https://www.w3schools.com/css/css_grid.asp">W3 Schools</a>
+			</p>
+			<!-- WE HAVEN'T LEARNED TABLES YET SO YOU CAN IGNORE THIS: THIS IS JUST A REFERENCE -->
+			<table>
+				<tr>
+					<th>Property</th>
+					<th>Description</th>
+					<th>Example</th>
+				</tr>
+				<tr>
+					<td><code>grid-template-columns</code></td>
+					<td>Specifies the number of columns within a grid</td>
+					<td>
+						<code> grid-template-columns: auto auto auto; </code>
+						<!-- (creates a three-column layout) -->
+					</td>
+				</tr>
+				<tr>
+					<td><code>grid-template-rows</code></td>
+					<td>Specifies the size of rows within a grid</td>
+					<td><code>grid-template-rows: 200px 400px;</code></td>
+				</tr>
+				<tr>
+					<td><code>grid-row-start</code></td>
+					<td>Specifies start of a grid row based on grid line numbers</td>
+					<td><code>grid-row-start: 1;</code></td>
+				</tr>
+				<tr>
+					<td><code>grid-row-end</code></td>
+					<td>Specifies end of a grid row based on grid line numbers</td>
+					<td><code>grid-row-end: 3;</code></td>
+				</tr>
+				<tr>
+					<td><code>grid-row</code></td>
+					<td>Shorthand for grid-row-end and grid-row-start</td>
+					<td><code>grid-row: 1/5;</code></td>
+				</tr>
+				<tr>
+					<td><code>grid-column-start</code></td>
+					<td>Specifies start of a grid column based on grid line numbers</td>
+					<td><code>grid-column-start: 1;</code></td>
+				</tr>
+				<tr>
+					<td><code>grid-column-end</code></td>
+					<td>Specifies end of a grid column based on grid line numbers</td>
+					<td><code>grid-column-end: 3;</code></td>
+				</tr>
+				<tr>
+					<td><code>grid-column</code></td>
+					<td>Shorthand for grid-column-end and grid-column-start</td>
+					<td><code>grid-column: 1/5;</code></td>
+				</tr>
+				<tr>
+					<td><code>grid-column-gap</code></td>
+					<td>Specifies the column gap between each box of content</td>
+					<td><code>grid-column-gap: 30px;</code></td>
+				</tr>
+				<tr>
+					<td><code>grid-row-gap</code></td>
+					<td>Specifies the row gap between each box of content</td>
+					<td><code>grid-row-gap: 10px;</code></td>
+				</tr>
+				<tr>
+					<td><code>grid-gap</code></td>
+					<td>Shorthand for grid-row-gap and grid-column-gap</td>
+					<td>
+						<code>grid-gap: 10px 30px;</code>
+					</td>
+				</tr>
+			</table>
+			<!--  * * * * * * * * * * * * * * * * * * * * * * * * *  * * * * * * * * * * 	BEGIN GRIDS	* * * * * * * * * * * * * * * * * * * *  * * * * ** *  -->
+			<!-- FIRST GRID: SIMPLE -->
+			<div id="grid-demos">
+				<h2>Simple Grid</h2>
+				<p>
+					Simple Grid uses <code>auto auto auto auto</code> to define 4 columns
+					on desktop
+				</p>
+				<div class="grid-container grid-simple">
+					<p class="grid-item">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
+						cumque repudiandae atque? Optio minima minus asperiores eaque sint
+						maiores. Repellendus, neque magni vero iure odit qui praesentium
+						inventore consequatur ut?
+					</p>
+					<p class="grid-item">
+						Provident, obcaecati voluptatibus ducimus consequatur tempore veniam
+						aliquam maxime iusto numquam eligendi cupiditate impedit voluptatum
+						nihil nemo optio ad doloribus quisquam officia placeat odit?
+						Architecto quae dolore ut delectus ab.
+					</p>
+					<p class="grid-item">
+						Molestias, tenetur, repudiandae obcaecati corrupti nisi asperiores
+						soluta facere neque sapiente ad culpa minus impedit quas, harum
+						mollitia! Blanditiis quisquam nemo iusto veniam consectetur est a
+						repudiandae nisi! Accusantium, vel.
+					</p>
+					<p class="grid-item">
+						Labore quaerat dignissimos blanditiis commodi neque enim explicabo,
+						laboriosam aliquid totam amet quidem nihil esse nam error quas
+						temporibus, quis minima laudantium fuga! Fugit sint quasi alias
+						officia? Itaque, ducimus?
+					</p>
+				</div>
+				<h2>Spanning Grid</h2>
+				<p>
+					Spanning Grid uses row and col spans throughout which changes the
+					layout
+				</p>
+				<div class="grid-container grid-spanning">
+					<p class="grid-item span-item1">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
+						cumque repudiandae atque? Optio minima minus asperiores eaque sint
+						maiores. Repellendus, neque magni vero iure odit qui praesentium
+						inventore consequatur ut?
+					</p>
+					<p class="grid-item">
+						Provident, obcaecati voluptatibus ducimus consequatur tempore veniam
+						aliquam maxime iusto numquam eligendi cupiditate impedit voluptatum
+						nihil nemo optio ad doloribus quisquam officia placeat odit?
+						Architecto quae dolore ut delectus ab.
+					</p>
+					<p class="grid-item">
+						Molestias, tenetur, repudiandae obcaecati corrupti nisi asperiores
+						soluta facere neque sapiente ad culpa minus impedit quas, harum
+						mollitia! Blanditiis quisquam nemo iusto veniam consectetur est a
+						repudiandae nisi! Accusantium, vel.
+					</p>
+					<p class="grid-item span-item2">
+						Labore quaerat dignissimos blanditiis commodi neque enim explicabo,
+						laboriosam aliquid totam amet quidem nihil esse nam error quas
+						temporibus, quis minima laudantium fuga! Fugit sint quasi alias
+						officia? Itaque, ducimus?
+					</p>
+					<p class="grid-item">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+						molestiae, fuga officia consectetur quaerat vero culpa blanditiis
+						nisi beatae error tempora laboriosam quisquam eligendi consequatur
+						sed, corrupti unde dolorum expedita.
+					</p>
+					<p class="grid-item">
+						Provident officia nesciunt illo necessitatibus at doloremque
+						mollitia aut magnam tempora, quis in dolor vero. Nam ipsam ex
+						explicabo nulla quod accusamus reprehenderit consectetur aperiam
+						libero? Commodi a quos possimus?
+					</p>
+					<p class="grid-item">
+						Maiores quam quas facilis saepe ut officia. Maxime, illum! Alias,
+						distinctio adipisci sunt mollitia cupiditate perspiciatis deserunt
+						praesentium perferendis voluptatibus magnam tenetur, excepturi aut
+						voluptatem! Nobis corporis ipsa labore nulla.
+					</p>
+					<p class="grid-item">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+						molestiae, fuga officia consectetur quaerat vero culpa blanditiis
+						nisi beatae error tempora laboriosam quisquam eligendi consequatur
+						sed, corrupti unde dolorum expedita.
+					</p>
+					<p class="grid-item">
+						Provident officia nesciunt illo necessitatibus at doloremque
+						mollitia aut magnam tempora, quis in dolor vero. Nam ipsam ex
+						explicabo nulla quod accusamus reprehenderit consectetur aperiam
+						libero? Commodi a quos possimus?
+					</p>
+					<p class="grid-item span-item3">
+						Maiores quam quas facilis saepe ut officia. Maxime, illum! Alias,
+						distinctio adipisci sunt mollitia cupiditate perspiciatis deserunt
+						praesentium perferendis voluptatibus magnam tenetur, excepturi aut
+						voluptatem! Nobis corporis ipsa labore nulla.
+					</p>
+				</div>
+				<h2>Grid Auto Flow</h2>
+				<p>The <code>grid-auto-flow</code> property lets us fill in gaps!</p>
+				<div class="grid-container grid-flow">
+					<p class="grid-item">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+						autem, provident dolorum quibusdam debitis quis id sit. Vero magni,
+						enim hic reiciendis cupiditate quaerat facere accusamus repellendus
+						adipisci excepturi explicabo.
+					</p>
+					<p class="grid-item">
+						Itaque dolores esse amet, autem totam possimus delectus quam aliquid
+						eveniet minima illo harum unde voluptatem, ducimus ipsa optio omnis
+						nostrum quisquam nulla ab modi laboriosam rem obcaecati. Laborum,
+						officiis?
+					</p>
+					<p class="grid-item">
+						Id hic minus enim ad nesciunt deserunt eaque, in natus eius.
+						Aspernatur saepe delectus dicta beatae inventore explicabo odit
+						recusandae aliquam cumque nam esse et, eos quasi pariatur omnis
+						nulla.
+					</p>
+					<p class="grid-item item-span-big">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+						quaerat ducimus aperiam aliquid libero enim voluptatibus odio
+						molestias. Dolore sunt sequi qui possimus, quaerat quia delectus
+						fugiat molestias maxime nemo.
+					</p>
+					<p class="grid-item">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+						autem, provident dolorum quibusdam debitis quis id sit. Vero magni,
+						enim hic reiciendis cupiditate quaerat facere accusamus repellendus
+						adipisci excepturi explicabo.
+					</p>
+					<p class="grid-item">
+						Itaque dolores esse amet, autem totam possimus delectus quam aliquid
+						eveniet minima illo harum unde voluptatem, ducimus ipsa optio omnis
+						nostrum quisquam nulla ab modi laboriosam rem obcaecati. Laborum,
+						officiis?
+					</p>
+					<p class="grid-item">
+						Id hic minus enim ad nesciunt deserunt eaque, in natus eius.
+						Aspernatur saepe delectus dicta beatae inventore explicabo odit
+						recusandae aliquam cumque nam esse et, eos quasi pariatur omnis
+						nulla.
+					</p>
+					<p class="grid-item item-span-big">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+						quaerat ducimus aperiam aliquid libero enim voluptatibus odio
+						molestias. Dolore sunt sequi qui possimus, quaerat quia delectus
+						fugiat molestias maxime nemo.
+					</p>
+					<p class="grid-item item-span-huge">
+						Itaque dolores esse amet, autem totam possimus delectus quam aliquid
+						eveniet minima illo harum unde voluptatem, ducimus ipsa optio omnis
+						nostrum quisquam nulla ab modi laboriosam rem obcaecati. Laborum,
+						officiis?
+					</p>
+					<p class="grid-item item-span-big">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+						quaerat ducimus aperiam aliquid libero enim voluptatibus odio
+						molestias. Dolore sunt sequi qui possimus, quaerat quia delectus
+						fugiat molestias maxime nemo.
+					</p>
+					<p class="grid-item">
+						Id hic minus enim ad nesciunt deserunt eaque, in natus eius.
+						Aspernatur saepe delectus dicta beatae inventore explicabo odit
+						recusandae aliquam cumque nam esse et, eos quasi pariatur omnis
+						nulla.
+					</p>
+					<p class="grid-item item-span-big">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+						quaerat ducimus aperiam aliquid libero enim voluptatibus odio
+						molestias. Dolore sunt sequi qui possimus, quaerat quia delectus
+						fugiat molestias maxime nemo.
+					</p>
+				</div>
+			</div>
+			<!--  						E N D 			G R I D S 				 -->
+		</main>
+		<footer>&copy; Claude 2023</footer>
+		<script src="scripts.js"></script>
+	</body>
+</html>

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.micro-5-regular {
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucidad Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 40px;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 40px;
+}
+
+p {
+    border: 5px solid blue;
+    padding: 2rem;
+}
+
+h1 {
+    color:chartreuse;
+}
+
+nav li {
+    list-style-type: none;
+    /* display: inline-block; */
+    display: block;
+    border-bottom: 5px solid black;
+    background-color: coral;
+}
+
+nav li:first-child {
+    border-top: 5px solid black;
+}
+
+nav li a {
+    /* padding: 30px; */
+    background-color: blueviolet;
+    padding: 20px 0;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    background-color: white;
+    color: blueviolet;
+}
+
+nav {
+    text-align: center;
+}
+
+li {
+    list-style-position: inside;
+}
+
+img {
+    max-width: 100%;
+}
+
+.albumart {
+    width: 200px;
+}
+
+.musicalart {
+    max-width: 50%;
+}
+
+.border {
+    border: 10px dashed black;
+}
+
+
+/* MEDIA QUERIES */
+
+/* DESKTOP VIEW/LARGESCREENS */
+@media screen (min-width: 798px) {
+
+    /* NAVIGATION */
+
+    nav {
+        position: sticky;
+        top: 0;
+        background-color: blueviolet;
+    }
+
+    nav li {
+        display: inline-block;
+        border: none;
+        margin: 0 2rem;
+    }
+
+    nav li:first-child {
+
+    }
+
+    nav li a {
+        display: inline-block;
+        padding: 20px 40px;
+    }
+
+}
